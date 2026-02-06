@@ -1,0 +1,6 @@
+services:
+  ssu_breadcrumbs.breadcrumb:
+    class: Drupal\ssu_breadcrumbs\Breadcrumb\ParentNodeBreadcrumbBuilder
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: breadcrumb_builder, priority: 1001 }
